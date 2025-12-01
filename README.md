@@ -1,5 +1,34 @@
 # mush
 
+## remote host requirements
+
+Install [amazon-ecr-credential-helper](https://github.com/awslabs/amazon-ecr-credential-helper). Add this config:
+
+**`/root/.docker/config.json`**
+```json
+{
+    "auths": {
+        "<ecr-registry-url>: "ecr-login"
+    }
+}
+```
+
+**`/root/docker/docker-compose.yml`**
+```yaml
+services:
+  hello-world:
+    image: <ecr-registry-url>/<repository>
+    ports:
+      - 8001:3000
+```
+
+**Caddyfile**
+```
+<url> {
+    reverse_proxy :8001
+}
+```
+
 ## Your local makefile
 
 Include this in your makefile:
