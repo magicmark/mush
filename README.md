@@ -8,7 +8,7 @@ Install [amazon-ecr-credential-helper](https://github.com/awslabs/amazon-ecr-cre
 ```json
 {
     "auths": {
-        "<ecr-registry-url>: "ecr-login"
+        "<ecr-registry-url>": "ecr-login"
     }
 }
 ```
