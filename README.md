@@ -4,7 +4,7 @@
 
 Include this in your makefile:
 
-```mk
+```mf
 ECR_REGISTRY = ""  # e.g. 123456789.dkr.ecr.us-east-1.amazonaws.com
 REPOSITORY   = ""  # e.g. library/ubuntu
 PLATFORM     = ""  # e.g. linux/amd64
