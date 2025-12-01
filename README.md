@@ -7,7 +7,7 @@ Install [amazon-ecr-credential-helper](https://github.com/awslabs/amazon-ecr-cre
 **`/root/.docker/config.json`**
 ```json
 {
-    "auths": {
+    "credHelpers": {
         "<ecr-registry-url>": "ecr-login"
     }
 }
